@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { TodoItemsContext } from "../store/todo-item-store";
 
 export default function Task({
-  task,
-  handleComplete,
-  completed,
-  handleDelete,
+  task
 }) {
+  const{handleComplete,completed,handleDelete}=useContext(TodoItemsContext)
   return (
     <div
       className={`w-screen lg:w-[900px] rounded-md ${
